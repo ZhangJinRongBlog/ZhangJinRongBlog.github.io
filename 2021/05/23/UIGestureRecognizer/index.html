@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="UIGestureRecognizerLongPressGestureRecognizer12345678910111213141516171819202122232425262728UILongPressGestureRecognizer *longPressGestureRecognizer &#x3D; [[UILongPressGestureRecognizer alloc] initWithTar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UIGestureRecognizer">
+<meta property="og:url" content="http://example.com/2021/05/23/UIGestureRecognizer/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="UIGestureRecognizerLongPressGestureRecognizer12345678910111213141516171819202122232425262728UILongPressGestureRecognizer *longPressGestureRecognizer &#x3D; [[UILongPressGestureRecognizer alloc] initWithTar">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-23T07:27:10.144Z">
+<meta property="article:modified_time" content="2021-05-23T07:36:52.643Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/05/23/UIGestureRecognizer/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>UIGestureRecognizer | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/23/UIGestureRecognizer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          UIGestureRecognizer
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-05-23 15:27:10 / Modified: 15:36:52" itemprop="dateCreated datePublished" datetime="2021-05-23T15:27:10+08:00">2021-05-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="UIGestureRecognizer"><a href="#UIGestureRecognizer" class="headerlink" title="UIGestureRecognizer"></a>UIGestureRecognizer</h2><h3 id="LongPressGestureRecognizer"><a href="#LongPressGestureRecognizer" class="headerlink" title="LongPressGestureRecognizer"></a>LongPressGestureRecognizer</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];</span><br><span class="line">longPressGestureRecognizer.numberOfTouchesRequired = 1;</span><br><span class="line">[self.longPressView addGestureRecognizer:longPressGestureRecognizer];</span><br><span class="line"></span><br><span class="line">- (void)longPressAction:(UILongPressGestureRecognizer *)sender&#123;</span><br><span class="line">    if(sender.state == UIGestureRecognizerStateBegan)&#123;        </span><br><span class="line">        [self becomeFirstResponder];        </span><br><span class="line">        UIMenuItem *copyItem = [[UIMenuItem alloc] initWithTitle:@&quot;Copy&quot; action:@selector(anyAction:)];</span><br><span class="line">        UIMenuItem *pasteItem = [[UIMenuItem alloc] initWithTitle:@&quot;Paste&quot; action:@selector(anyAction:)];</span><br><span class="line">        UIMenuController *mentController = [UIMenuController sharedMenuController];</span><br><span class="line">        mentController.menuItems = @[copyItem,pasteItem];</span><br><span class="line">        </span><br><span class="line">        CGPoint locationInView = [sender locationInView:sender.view];</span><br><span class="line">        CGRect menuLocation = CGRectMake(locationInView.x, locationInView.y, 0, 0);        </span><br><span class="line">        if (@available(iOS 13, *)) &#123;</span><br><span class="line">            [mentController showMenuFromView:sender.view rect:menuLocation];</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            [mentController setTargetRect:menuLocation inView:[sender view]];</span><br><span class="line">            [mentController setMenuVisible:true animated:true];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br><span class="line">- (void)anyAction:(id)anyObject&#123;</span><br><span class="line">    NSLog(@&quot;点击&quot;);</span><br><span class="line">&#125;</span><br><span class="line">- (BOOL)canBecomeFirstResponder&#123;</span><br><span class="line">    return YES;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ScreenEdgePanGestureRecognizer"><a href="#ScreenEdgePanGestureRecognizer" class="headerlink" title="ScreenEdgePanGestureRecognizer"></a>ScreenEdgePanGestureRecognizer</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">UIScreenEdgePanGestureRecognizer *screenEdgePanGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(dimissAction:)];</span><br><span class="line">screenEdgePanGestureRecognizer.edges = UIRectEdgeLeft;</span><br><span class="line">[self.view addGestureRecognizer:screenEdgePanGestureRecognizer];</span><br><span class="line"></span><br><span class="line">- (void)dimissAction:(UIScreenEdgePanGestureRecognizer *)sender&#123;</span><br><span class="line">    [self dismissViewControllerAnimated:true completion:nil];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PanGestureecognizer"><a href="#PanGestureecognizer" class="headerlink" title="PanGestureecognizer"></a>PanGestureecognizer</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureAction:)];</span><br><span class="line">panGestureRecognizer.maximumNumberOfTouches = 1;</span><br><span class="line">panGestureRecognizer.minimumNumberOfTouches = 1;</span><br><span class="line">[self.panView addGestureRecognizer:panGestureRecognizer];</span><br><span class="line"></span><br><span class="line">- (void)panGestureAction:(UIPanGestureRecognizer *)gestureRecognizer&#123;</span><br><span class="line">    if(gestureRecognizer.state == UIGestureRecognizerStateBegan || gestureRecognizer.state == UIGestureRecognizerStateChanged)&#123;</span><br><span class="line">        UIView *view = [gestureRecognizer view];</span><br><span class="line">        CGPoint translation = [gestureRecognizer translationInView:view.superview];</span><br><span class="line">        view.center = CGPointMake(view.center.x + translation.x, view.center.y + translation.y);</span><br><span class="line">        [gestureRecognizer setTranslation:CGPointZero inView:[view superview]];</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="SwipeGestureRecognizer"><a href="#SwipeGestureRecognizer" class="headerlink" title="SwipeGestureRecognizer"></a>SwipeGestureRecognizer</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeAction:)];</span><br><span class="line">swipeGestureRecognizer.numberOfTouchesRequired = 1;</span><br><span class="line">swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;</span><br><span class="line">//这种不行</span><br><span class="line">//    swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionUp|UISwipeGestureRecognizerDirectionDown|UISwipeGestureRecognizerDirectionLeft|UISwipeGestureRecognizerDirectionRight;</span><br><span class="line">[self.view addGestureRecognizer:swipeGestureRecognizer];</span><br><span class="line"></span><br><span class="line">- (void)swipeAction:(UISwipeGestureRecognizer *)sender&#123;    </span><br><span class="line">    switch (sender.direction) &#123;        </span><br><span class="line">        case UISwipeGestureRecognizerDirectionRight:&#123;</span><br><span class="line">            NSLog(@&quot;UISwipeGestureRecognizerDirectionRight&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">            break;</span><br><span class="line">        case UISwipeGestureRecognizerDirectionLeft:&#123;</span><br><span class="line">            NSLog(@&quot;UISwipeGestureRecognizerDirectionLeft&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">            break;</span><br><span class="line">        case UISwipeGestureRecognizerDirectionUp:&#123;</span><br><span class="line">            NSLog(@&quot;UISwipeGestureRecognizerDirectionUp&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">            break;</span><br><span class="line">        case UISwipeGestureRecognizerDirectionDown:&#123;</span><br><span class="line">            NSLog(@&quot;UISwipeGestureRecognizerDirectionDown&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">            break;     </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="RotationGestureRecognizer"><a href="#RotationGestureRecognizer" class="headerlink" title="RotationGestureRecognizer"></a>RotationGestureRecognizer</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">UIRotationGestureRecognizer *rotationGestreuRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotationChange:)];</span><br><span class="line">[self.imageView addGestureRecognizer:rotationGestreuRecognizer];</span><br><span class="line"></span><br><span class="line">- (void)rotationChange:(UIRotationGestureRecognizer *)gestureRecognizer&#123;</span><br><span class="line">    [self adjustAnchorPointForGestureRecognizer:gestureRecognizer];</span><br><span class="line">    if( gestureRecognizer.state == UIGestureRecognizerStateBegan || gestureRecognizer.state == UIGestureRecognizerStateChanged )&#123;</span><br><span class="line">        [gestureRecognizer view].transform = CGAffineTransformRotate(gestureRecognizer.view.transform, gestureRecognizer.rotation);</span><br><span class="line">        [gestureRecognizer setRotation:0];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">- (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer&#123;    </span><br><span class="line">    if(gestureRecognizer.state == UIGestureRecognizerStateBegan)&#123;        </span><br><span class="line">        UIView *view = [gestureRecognizer view];</span><br><span class="line">        CGPoint locationInView = [gestureRecognizer locationInView:view];</span><br><span class="line">        CGPoint locationInSuperView = [gestureRecognizer locationInView:view.superview];</span><br><span class="line">        view.layer.anchorPoint = CGPointMake(locationInView.x / CGRectGetWidth(view.bounds), locationInView.y / CGRectGetHeight(view.bounds));</span><br><span class="line">        view.center = locationInSuperView;        </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PinchGestureRecognizer"><a href="#PinchGestureRecognizer" class="headerlink" title="PinchGestureRecognizer"></a>PinchGestureRecognizer</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchAction:)];</span><br><span class="line">self.imageView.userInteractionEnabled = true;</span><br><span class="line">[self.imageView addGestureRecognizer:pinchGestureRecognizer];</span><br><span class="line"></span><br><span class="line">- (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer *)sender&#123;</span><br><span class="line">    if(sender.state == UIGestureRecognizerStateBegan)&#123; </span><br><span class="line">        UIView *view = [sender view];</span><br><span class="line">        CGPoint locationInView = [sender locationInView:view];        </span><br><span class="line">        CGPoint locationInSuperView = [sender locationInView:view.superview];</span><br><span class="line">        //设置缩放的锚点位置  anchorPoint x ： 0~1  y: 0~1</span><br><span class="line">        view.layer.anchorPoint = CGPointMake(locationInView.x/view.bounds.size.width, locationInView.y/view.bounds.size.height);</span><br><span class="line">        view.center = locationInSuperView;</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br><span class="line">- (void)pinchAction:(UIPinchGestureRecognizer *)sender&#123;</span><br><span class="line">    [self adjustAnchorPointForGestureRecognizer:sender];    </span><br><span class="line">    if(sender.state == UIGestureRecognizerStateBegan || sender.state == UIGestureRecognizerStateChanged)&#123;</span><br><span class="line">        //缩放</span><br><span class="line">        sender.view.transform = CGAffineTransformScale(sender.view.transform, sender.scale, sender.scale);</span><br><span class="line">        //保证下次缩放是在当前值的基础上缩放</span><br><span class="line">        [sender setScale:1];</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="TapGestureRecognizer"><a href="#TapGestureRecognizer" class="headerlink" title="TapGestureRecognizer"></a>TapGestureRecognizer</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];</span><br><span class="line">tapGestureRecognizer.numberOfTapsRequired = 1;</span><br><span class="line">tapGestureRecognizer.numberOfTouchesRequired = 1;</span><br><span class="line">[self.tapView addGestureRecognizer:tapGestureRecognizer];</span><br><span class="line"></span><br><span class="line">- (void)tapAction:(UITapGestureRecognizer *)sender&#123;</span><br><span class="line">    NSLog(@&quot;点击了一次&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/05/22/UINavigationBar/" rel="prev" title="UINavigationBar">
+      <i class="fa fa-chevron-left"></i> UINavigationBar
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#UIGestureRecognizer"><span class="nav-number">1.</span> <span class="nav-text">UIGestureRecognizer</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LongPressGestureRecognizer"><span class="nav-number">1.1.</span> <span class="nav-text">LongPressGestureRecognizer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ScreenEdgePanGestureRecognizer"><span class="nav-number">1.2.</span> <span class="nav-text">ScreenEdgePanGestureRecognizer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PanGestureecognizer"><span class="nav-number">1.3.</span> <span class="nav-text">PanGestureecognizer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SwipeGestureRecognizer"><span class="nav-number">1.4.</span> <span class="nav-text">SwipeGestureRecognizer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RotationGestureRecognizer"><span class="nav-number">1.5.</span> <span class="nav-text">RotationGestureRecognizer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PinchGestureRecognizer"><span class="nav-number">1.6.</span> <span class="nav-text">PinchGestureRecognizer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TapGestureRecognizer"><span class="nav-number">1.7.</span> <span class="nav-text">TapGestureRecognizer</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
